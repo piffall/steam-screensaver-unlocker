@@ -1,0 +1,28 @@
+{
+  "name": "steam-screensaver-unlocker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "This daemon unlock screensaver when Steam (in-home) streaming is working",
+  "main": "main.js",
+  "bin": {
+    "steam-screensaver-unlocker": "unlocker.js"
+  },
+  "scripts": {
+    "test": "./unlocker.js test"
+  },
+  "keywords": [
+    "steam",
+    "in-home streaming",
+    "screen lock"
+  ],
+  "author": "piffall",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/piffall/steam-screeasaver-unlocker.git"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "daemon": "^1.1.0",
+    "file-tail": "^0.3.0"
+  }
+}
