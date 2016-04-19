@@ -2,12 +2,12 @@
   "name": "steam-screensaver-unlocker",
   "version": "1.0.0",
   "description": "This daemon unlock screensaver when Steam (in-home) streaming is working",
-  "main": "main.js",
+  "main": "index.js",
   "bin": {
-    "steam-screensaver-unlocker": "unlocker.js"
+    "steam-screensaver-unlocker": "./app.js"
   },
   "scripts": {
-    "test": "./unlocker.js test"
+    "test": "./app.js test"
   },
   "keywords": [
     "steam",

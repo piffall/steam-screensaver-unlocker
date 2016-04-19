@@ -6,7 +6,7 @@ var events = require('events');
 var fileTailer = require('file-tail');
 
 // Deamonize
-//require('daemon')()
+require('daemon')()
 
 // Start event loop.
 var emitter = new events.EventEmitter();
@@ -16,13 +16,13 @@ var defaultSteamHome = process.env.HOME + "/.steam";
 var streamLogFile = "/steam/logs/streaming_log.txt";
 var logFile = defaultSteamHome + streamLogFile;
 
-// Show some output to user
-console.log("Monitoring log file: " + logFile);
-
 // Test with this file
 if (process.argv[2] == "test") {
   logFile = 'logfile.log';
 }
+
+// Show some output to user
+console.log("Monitoring log file: " + logFile);
 
 // Tail the file
 ft = fileTailer.startTailing(logFile);
@@ -32,10 +32,11 @@ ft.on('line', function(line){
 
 // Handle new line
 emitter.on("newline",function(){
-  console.log('In-home streaming activity detected, unlocking screen.');
   exec("DISPLAY=:0 gnome-screensaver-command -d", function(error, stdout, stderr){
     if (error) {
       console.log("ERROR: " + stderr);
+    } else {
+      console.log('In-home streaming activity detected, unlocking screen.');
     }
   });
 });
