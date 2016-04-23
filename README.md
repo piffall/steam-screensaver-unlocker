@@ -16,3 +16,11 @@ git clone https://github.com/piffall/steam-screensaver-unlocker.git
 cd steam-screensaver-unlocker
 sudo npm install -g
 ```
+
+## Run
+
+```bash
+steam-screensaver-unlocker
+```
+
+I recomend you to launch at start up.
