@@ -1,7 +1,7 @@
 {
   "name": "steam-screensaver-unlocker",
   "version": "1.0.0",
-  "description": "This daemon unlock screensaver when Steam (in-home) streaming is working",
+  "description": "This daemon unlocks screensaver when Steam (in-home) streaming is emmiting",
   "main": "index.js",
   "bin": {
     "steam-screensaver-unlocker": "./app.js"
