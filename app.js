@@ -33,8 +33,14 @@ console.log("Monitoring log file: " + logFile);
 // Tail the file
 ft = fileTailer.startTailing(logFile);
 ft.on('line', (line) => {
-  emitter.emit("newline");
-});
+    emitter.emit("newline");
+  })
+  .on('stream', (stream) => {
+    emitter.emit("newline");
+  })
+  .on('tailError', (error) => {
+    console.log(error);
+  });
 
 // Handle new line
 emitter.on("newline",() => {

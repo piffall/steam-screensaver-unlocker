@@ -24,3 +24,9 @@ steam-screensaver-unlocker
 ```
 
 I recomend you to launch at start up.
+
+
+## Donations (BTC)
+*Please consider support the project donating to the Bitcoin address below:*
+
+17q6RT31yEJAptrUzXhwEq5iPwEguEFFBG
