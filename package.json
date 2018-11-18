@@ -21,7 +21,6 @@
   },
   "license": "GPL-3.0",
   "dependencies": {
-    "daemon": "^1.1.0",
     "file-tail": "^0.3.0"
   }
 }

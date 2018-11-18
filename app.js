@@ -14,19 +14,6 @@ var defaultSteamHome = process.env.HOME + "/.steam";
 var streamLogFile = "/steam/logs/streaming_log.txt";
 var logFile = defaultSteamHome + streamLogFile;
 
-// Run or test
-if (process.argv[2] == "test") {
-  logFile = '/tmp/monitor_example_file.log';
-  setInterval(() => {
-    fs.appendFile(logFile, "Example data line", (err) => {
-      console.log("Writting in file...");
-    });
-  },1000);
-} else {
-  require('daemon')()
-}
-
-
 // Show some output to user
 console.log("Monitoring log file: " + logFile);
 
@@ -44,7 +31,7 @@ ft.on('line', (line) => {
 
 // Handle new line
 emitter.on("newline",() => {
-  exec("DISPLAY=:0 gnome-screensaver-command -d", (error, stdout, stderr) => {
+  exec("export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d", (error, stdout, stderr) => {
     if (error) {
       console.log("ERROR: " + stderr);
     } else {
