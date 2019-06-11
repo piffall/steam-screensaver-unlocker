@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=steam-screensaver-unlocker
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[es_ES]=Steam screen unlocker
+Name=Steam screen unlocker
+Comment[es_ES]=Steam screen unlocker for Gnome

@@ -7,7 +7,7 @@ My Gnome desktop auto locks the screen when I'm away, and when I want to play a 
 
 ## The solution
 
-Run this daemon on your Gnome desktop.
+Run this daemon on your Gnome desktop. Requires `gnome-screensaver`.
 
 ## Install
 
@@ -23,7 +23,12 @@ sudo npm install -g
 steam-screensaver-unlocker
 ```
 
-I recomend you to launch at start up.
+I recomend you to launch at start up. To do it, simply copy the desktop file
+into your autostart config path.
+
+```bash
+cp steam-screensaver-unlocker.desktop ~/.config/autostart/
+```
 
 
 ## Donations (BTC)
