@@ -31,7 +31,7 @@ ft.on('line', (line) => {
 
 // Handle new line
 emitter.on("newline",() => {
-  exec("export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d", (error, stdout, stderr) => {
+  exec("loginctl unlock-session 3", (error, stdout, stderr) => {
     if (error) {
       console.log("ERROR: " + stderr);
     } else {
